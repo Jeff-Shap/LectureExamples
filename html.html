@@ -1,0 +1,120 @@
+html.html
+
+
+
+
+Custom Tag Creation:
+	via "templates": 
+	http://webcomponents.org/articles/introduction-to-template-element/
+
+	custom elements gallery/software: https://www.polymer-project.org/0.5/docs/start/getting-the-code.html
+
+Microformats:
+	A "new standard" of html that hasnt been approved by W3C - can be activated via plugins
+		Created to help bots, primarily (google)
+	Not widely used (not universal by any means)
+
+Semantic HTML
+	HTML markup describes the meaning of the content, but not the appearance (what CSS does)...what about <h1>?
+		When creating pages, choose the elements that best describe the meaning of your content without regard for their presentation
+
+	<i> is now <emp> and <b> is now <strong>...why?
+		allows CSS sheet to describe emphasis and strong displays (emphasis/strong = semantic, whereas italic/bold = stylistic)
+		<i> = "read this text in alt voice"
+		<b> = "read this text in a different mood"
+
+	<div> and <span> can be assigned "classes" or "IDs" for identification/relationship identificiation
+
+		!!! ID IS ONLY FOR USE IN ONE-OFF CIRCUMSTANCES !!!
+			<div class="products">
+				<span class="name">
+
+			<div class=:"users">
+				<span class="name">
+
+Exploring & Debugging:
+	"http is for everyone" - html/javascript/css 
+	are publicily accessible for all websites
+	Chrome Deb Tools - make edits and see live (refresh will reset)
+	CodePen.io - html/css "scratchpad" (can be saved)
+
+	!!! ALWAYS VALIDATE CODE VIA W3C SITE (OR OTHER)!!!
+
+Accessibility:
+	Accessibility Guidelines:
+		http://www.w3.org/TR/WAI-WEBCONTENT/full-checklist.html
+
+IECCs:
+	Getting IE8 to understand HTML5:
+	This "comment" is recognized by IE ONLY as a marker:
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+Nsting HTML:
+	each element must be properly nested 
+	(fully contained within parent element)
+
+Generic containers:
+	<div id="main">
+		<p><span>Content</span>goes here</p>
+	</div>
+
+	<div></div>
+		logicial division of a page: banner, nav bar, sidebar, etc
+			inlcude a line break
+	<span></span> 
+		individual words and phrases (inline elements) within paragraphs
+			do not include a line break
+	More Containers:
+	<header></header>
+	<footer></footer>
+	<article></article>
+	<section></section>
+	<h1..h6></h1..h6>
+
+	see: http://html5doctor.com/downloads/h5d-sectioning-flowchart.png
+
+Buttons
+	<input type="button" value="submit">
+	<button type="button" value="submit"
+
+Input
+	<input type="text" name="lastname">
+	Specifies user input field, doesn't do anything on its own (must be passed to method via form)
+
+Anchor Tag
+	<a></a>
+	links multiple pages; make the web "the web"
+
+Images:
+	<img src="images.jpg" alt="Alt text" />
+	Note: alt value is require
+		self-closing (void) tags --> there aren't many, but don't require a closing tag (also can't take anything other than source and options [no text])
+
+Comments:
+	framed by <!-- comment text -->
+		not frequently used...will not display on output but will be included in source code
+
+Character Escapes:
+	framed by & and ; (eg D&#237;blahblah)
+		while in "escape mode", #treats remaining characters as numeric code
+	for "&" in text, put &&
+
+Standard Syntax:
+	<a href="web.com">Wyncode</a>
+		1. element/tag <a></a>
+		2. attribute (href = web.com)
+		3. values (Wyncode)
+		
+Boilerplate: standardized pieces of text
+	HTML Boilerplate:
+		<!DOCTYPE html> #=> what version of html to expect
+		<html>
+			<head>
+				<meta charset="utf-8" /> #=> ASCII or UTF-8 (non-specified = comp guesses = potential security risk)
+				<title></title> #=> text in browser tabs/bookmarks (required)
+			</head>
+			<body> #=> rest of code here
+			</body>
+		</html> 

@@ -1,0 +1,171 @@
+
+
+
+
+
+/*
+!Important takes priority, regardless of order
+
+a {
+    color: green !important;
+}
+
+a {
+    color: red;
+}
+*/
+    
+
+/*
+EQUAL SPECIFICTY, SO LAST ONE (YELLOW) WINS:
+p .alink {
+    color:red;
+}
+
+.plink a {
+    color: yellow;
+}
+*/
+
+
+/*
+Specificty (least to most):
+    1. tag selector
+    2. class selector
+    3. ID selector
+    4. Inline style
+*/
+
+
+/* CLOSEST ANCESTOR RULE
+div {
+    color:red;
+}
+
+p {
+    color:blue;
+}
+*/
+
+
+/*
+P::before {  <---more or less a "prefix" to all <p> items
+    content: "A Tip!"; <--usually has content
+}
+
+P::after {  <---more or less a "suffix" to all <p> items
+    content: "A Tip!"; <--usually has content
+}
+*/
+
+
+/*
+h1 + p {   <-- Only adjacent (first child) <p> of <h1> (in this cass it will be <p class="special">
+    font-style: italic;
+}
+*/
+
+
+/*
+p.intro a {   <-- would apply to <p class="intro">
+    color:red;
+}
+
+p .intro a {  <--would apply to any child <a> with a parent of <class="intro"> with a parent of <p>
+    color:red;
+}
+*/
+
+
+/*
+h1 strong {      <-- targets strong as a child of h1 only
+    color: red;
+}
+*/
+
+
+/*
+Strikeout:
+* {
+    text-decoration: line-through;
+}
+*/
+
+
+/*
+AM I RED:
+h1, .special, #header {
+    color: red;
+}
+*/
+
+
+
+/*
+
+
+
+NOTES BELOW:
+
+
+
+
+css_test.css
+
+
+
+Group Selectors
+    h1,h2,h3,h4 {            <-- all in list will be styled
+        attribute:value;
+        attribute:value;
+    }
+
+Long Attribute Selectors:
+    input[type="text"]{       <-- all text inputs
+        attribute:value;
+        attribute:value;
+    }
+
+ID Selectors:
+    ## Only one element per ID (for JS purposes) ##
+    #header {
+        attribute:value;
+        attribute:value;
+    }
+
+    p#header {           <-- will find all <p ID=header>
+        attribute:value;
+        attribute:value;
+    }
+
+Class Selectors:
+    ## Note, use lowercase ##
+    ## classes will override elements ##
+    .special {
+         attribute:value;
+         attribute:value;
+    }
+
+    .voters {
+        attribute:value;
+        attribute:value;
+    }
+
+    p.voters {        <-- will find all <P class=voters>
+        attribute:value;
+        attribute:value;
+    }
+    
+    
+
+Element Selectors:
+    body {
+         attribute:value;
+         attribute:value;
+    }
+
+    p {
+        attribute:value;
+        attribute:value;
+    }
+*/
